@@ -1,6 +1,6 @@
 'use strict';
 
-import { makeOrdinal }from './makeOrdinal';
+import { makeOrdinal }from './makeOrdinal'
 import { isFinite } from './isFinite';
 import { isSafeNumber } from './isSafeNumber';
 
