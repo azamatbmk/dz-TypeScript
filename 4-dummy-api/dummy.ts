@@ -80,7 +80,8 @@ async function dummyApi(){
         return users
         
     } catch (error) {
-        console.error(error)
+        if(error instanceof Error)
+        console.error(error.message);
     }
 }
 
