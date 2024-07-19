@@ -74,7 +74,7 @@ interface User {
 
 async function dummyApi(url: string){
     try {
-        const responseUsers = await fetch(url)
+        const responseUsers: Response = await fetch(url)
         const { users } = await responseUsers.json()
         console.log(users)
         return users
