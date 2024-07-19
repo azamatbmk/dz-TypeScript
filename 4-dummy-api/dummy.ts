@@ -72,9 +72,9 @@ interface User {
 }
 
 
-async function dummyApi(){
+async function dummyApi(url: string){
     try {
-        const responseUsers = await fetch('https://dummyjson.com/users')
+        const responseUsers = await fetch(url)
         const { users } = await responseUsers.json()
         console.log(users)
         return users
@@ -85,4 +85,4 @@ async function dummyApi(){
     }
 }
 
-dummyApi()
+dummyApi('https://dummyjson.com/users')
