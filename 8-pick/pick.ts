@@ -10,9 +10,7 @@ const form: IUser = {
     skills: ['typescript, javascript']
 };
 
-type PickKeys<T> = (obj: T, arr: [ keyof T]) => K
-
-const pickObjectKeys: PickKeys<IUser> = (obj: IUser, arr: [ keyof IUser]) => {
+function pickObjectKeys<K, T extends IUser> (obj: T, arr: [ keyof IUser]): K {
     const newObj = {} as K;
     arr.forEach( key => {
         newObj[key] = obj[key]
